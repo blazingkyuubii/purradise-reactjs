@@ -18,7 +18,7 @@ export default function Home() {
     <div>
       <Navbar />
       <Hero />
-      <h1>Shop by CATegory :D</h1>
+      <h1>TESTING IF GIT WORKS</h1>
       <CategoryCard />
       <h1>Featured Products</h1>
       <div className="products-grid">{prodInfo}</div>
