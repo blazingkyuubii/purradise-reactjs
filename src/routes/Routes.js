@@ -26,7 +26,7 @@ export const router = createBrowserRouter([
     element: <ProductsFood />,
   },
   {
-    path: "/litter",
+    path: "/litters",
     element: <ProductsLitter />,
   },
   {

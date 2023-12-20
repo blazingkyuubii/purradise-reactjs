@@ -1,38 +1,31 @@
 import "./CategoryCard.css";
-import catAccessories from "./cat-accessories.png"
-import catFood from "./cat-food.png";
-import catLitter from "./cat-litter.png";
-import catToys from "./cat-toys.png";
-import catVitamins from "./cat-vitamins.png";
 
 //router
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
+export default function CategoryCard({ linkTo, imgSrc, imgAlt, isPortrait }) {
 
-export default function CategoryCard(){
-    return (
-      <div className="category-main-container">
-        <div className="category-card-container">
-          <Link to="/accessories">
-            <img className="category-card-img" src={catAccessories} />
-          </Link>
+  const portraitStyle = {
+    border: "2px solid rgb(255, 255, 255)",
+    borderRadius: "2%",
+    width: "100%",
+    height: "100%",
+  };
 
-          <Link to="/foods">
-            <img className="category-card-img" src={catFood} />
-          </Link>
+  const landscapeStyle = {
+    border: "2px solid rgb(255, 255, 255)",
+    borderRadius: "2%",
+    width: "100%",
+    height: "150px",
+  };
 
-          <Link to="/litter">
-            <img className="category-card-img" src={catLitter} />
-          </Link>
+  const cardOrientation = isPortrait ? portraitStyle : landscapeStyle
 
-          <Link to="/toys">
-            <img className="category-card-img" src={catToys} />
-          </Link>
-          
-          <Link to="/vitamins">
-            <img className="category-card-img" src={catVitamins} />
-          </Link>
-        </div>
-      </div>
-    );
+  return (
+    <div className="category-card-container">
+      <Link to={linkTo}>
+        <img className="category-card-img" src={imgSrc} alt={imgAlt} style={cardOrientation}/>
+      </Link>
+    </div>
+  );
 }

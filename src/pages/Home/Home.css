@@ -1,0 +1,19 @@
+.products-grid{
+    padding: 0 10% 5% 10%;
+}
+
+.category-grid{
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    justify-content: center;
+    gap: 5px;
+    padding: 0 10% 5% 10%;
+}
+
+.category-grid-landscape {
+    display: grid;
+    grid-template-columns: repeat(2, 500px);
+    justify-content: center;
+    gap: 5px;
+    padding: 0 10% 5% 10%;
+}
