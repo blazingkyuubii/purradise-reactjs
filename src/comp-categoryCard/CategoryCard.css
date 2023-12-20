@@ -1,0 +1,21 @@
+.category-title{
+    text-align: center;
+}
+
+.category-card-img{
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 2%;
+    width: 100%;
+    height: 100%;
+}
+
+.category-card-container{
+    padding: 0 10% 5% 10%;
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    gap: 5px;
+    justify-content: center;
+    /* display: flex;
+    flex-direction: row;
+    align-items: center; */
+}

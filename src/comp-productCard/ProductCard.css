@@ -1,0 +1,10 @@
+.product-image{
+    width: 150px;
+    height: 150px;
+}
+
+.product-card-container{
+    padding: 10%;
+    border: 1px solid rgb(221, 220, 220);
+    text-align: center;
+}

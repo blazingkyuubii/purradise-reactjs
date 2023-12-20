@@ -1,0 +1,33 @@
+.title-bold{
+    font-weight: bold;
+}
+
+.catCard-main-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.card-container{
+    border: 2px solid red;
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.card-image{
+    width: 100px;
+    height: 100px;
+}
+
+.sold{
+    color: red;
+}
+
+.process {
+    color: blue;
+}
+
+.avail {
+    color: green;
+}
