@@ -5,6 +5,7 @@ prodPrice:,
 prodDescription:,
 prodImg:,
 prodType:,
+isFeatured:,
 
 */
 
@@ -25,6 +26,7 @@ export default [
     prodDescription: "It's a great fountain",
     prodImg: "https://i.ebayimg.com/images/g/3k8AAOSwqIhetheH/s-l1600.jpg",
     prodType: "Accessories",
+    isFeatured: true,
   },
   {
     id: 3,
@@ -90,6 +92,7 @@ export default [
     prodImg:
       "https://www.petexpress.com.ph/cdn/shop/products/10265253-Our-Cat-Tofu-Cat-Litter-Lavander-6L-a.jpg?v=1615219938",
     prodType: "Litters",
+    isFeatured: true,
   },
   //TOYS
   {
@@ -109,6 +112,7 @@ export default [
     prodImg:
       "https://www.petwarehouse.ph/17701/petstages-catnip-chew-mice-cat-toy.jpg",
     prodType: "Toys",
+    isFeatured: true,
   },
   {
     id: 12,
@@ -118,6 +122,7 @@ export default [
     prodImg:
       "https://down-ph.img.susercontent.com/file/8b4ce41877e80c4988137d7b58d9d937",
     prodType: "Toys",
+    isFeatured: true,
   },
   //VITAMINS
   {
@@ -136,6 +141,7 @@ export default [
     prodImg:
       "https://www.petwarehouse.ph/10992/lc-vit-plus-multivitamins-cat-and-kitten-syrup.jpg",
     prodType: "Vitamins",
+    isFeatured: true,
   },
   {
     id: 15,
