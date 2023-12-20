@@ -7,7 +7,7 @@ import "./ProductsPage.css";
 
 export default function ProductsPage() {
   const prodAccessories = productData.filter(
-    (prop) => prop.prodType === "Litter"
+    (prop) => prop.prodType === "Litters"
   );
 
   const prodInfo = prodAccessories.map((prod) => {
