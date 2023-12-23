@@ -1,15 +1,17 @@
+//css imports
 import './Home.css'
+import "../../comp-productCard/ProductCard.css";
 
+//component imports
 import Navbar from "../../comp-navbar/Navbar";
 import Hero from "../../comp-hero/Hero";
 import Footer from "../../comp-footer/Footer";
 import CategoryCard from "../../comp-categoryCard/CategoryCard";
 import productData from "../../productData";
 import ProductCard from "../../comp-productCard/ProductCard";
-import "../../comp-productCard/ProductCard.css";
 
 
-//img src
+//categories img src
 import catAccessories from "../../comp-categoryCard/cat-accessories.png";
 import catFood from "../../comp-categoryCard/cat-food.png";
 import catLitter from "../../comp-categoryCard/cat-litter.png";
@@ -40,6 +42,9 @@ export default function Home() {
 
       <h1>Featured Products</h1>
       <div className="products-grid">{prodInfo}</div>
+
+      <h1>Purradise Collection</h1>
+      <CategoryCard/>
 
       <h1>Other Services</h1>
       <div className="category-grid-landscape">
