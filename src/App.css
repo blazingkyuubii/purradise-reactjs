@@ -1,7 +1,0 @@
-.content{
-    /* DISPLAY GRID IS FOR LEARNING PURPOSES ONLY, REMOVE IN ACTUAL DEVELOPMENT. */
-    /* display: grid;
-    grid-template-columns: repeat(4, 1fr); */
-    /* ------------------------------------------------------------------------- */
-    padding-inline: 15px;
-}
