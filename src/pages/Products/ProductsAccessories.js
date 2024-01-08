@@ -19,7 +19,7 @@ const prodInfo = prodAccessories.map((prod) => {
       <div>
         <Navbar />
         <Hero />
-        <h1 className="container mx-auto px-10 py-8 text-2xl font-semibold">
+        <h1 className="container mx-auto px-10 py-8 text-2xl">
           Cat Accessories
         </h1>
 
