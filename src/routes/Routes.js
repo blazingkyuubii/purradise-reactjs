@@ -39,7 +39,7 @@ export const router = createBrowserRouter([
     element: <ProductsVitamins />,
   },
   {
-    path: "/item",
+    path: "/product/:productId",
     element: <ProductView/>
   }
 ]);

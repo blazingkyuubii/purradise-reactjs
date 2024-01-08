@@ -13,7 +13,7 @@ export default function ProductCard({isFeatured, prod, linkTo}){
     const imgSize = isFeatured ? `${defaultImgSize} ${featuredImgSize}` : defaultImgSize
 
     return (
-      <Link to={linkTo}>
+      <Link to={`/product/${prod.id}`}>
         <div className={cardStyle}>
           <img className={imgSize} src={prod.prodImg} alt="product" />
           <p className=" mt-2 text-lg font-bold">{prod.prodName}</p>

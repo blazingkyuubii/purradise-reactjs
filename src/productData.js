@@ -37,69 +37,6 @@ export default [
       "https://ph-test-11.slatic.net/p/8e2a5b7202128638f59bb17b3e474e26.jpg",
     prodType: "Accessories",
   },
-  {
-    id: 3,
-    prodName: "Cat Scratch Tower",
-    prodPrice: 500,
-    prodDescription: "It's a scratchy scratcher",
-    prodImg:
-      "https://media.karousell.com/media/photos/products/2023/12/2/double_layers_cat_climbing_scr_1701487377_8a99ede7_progressive.jpg",
-    prodType: "Accessories",
-  },
-  {
-    id: 3,
-    prodName: "Cat Feather Toy",
-    prodPrice: 200,
-    prodDescription: "It's a scratchy scratcher",
-    prodImg:
-      "https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/51ijOyAbg7L._AC_UF1000,1000_QL80_.jpg",
-    prodType: "Accessories",
-  },
-  {
-    id: 3,
-    prodName: "Cat Feather Toy",
-    prodPrice: 200,
-    prodDescription: "It's a scratchy scratcher",
-    prodImg:
-      "https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/51ijOyAbg7L._AC_UF1000,1000_QL80_.jpg",
-    prodType: "Accessories",
-  },
-  {
-    id: 3,
-    prodName: "Cat Feather Toy",
-    prodPrice: 200,
-    prodDescription: "It's a scratchy scratcher",
-    prodImg:
-      "https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/51ijOyAbg7L._AC_UF1000,1000_QL80_.jpg",
-    prodType: "Accessories",
-  },
-  {
-    id: 3,
-    prodName: "Cat Feather Toy",
-    prodPrice: 200,
-    prodDescription: "It's a scratchy scratcher",
-    prodImg:
-      "https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/51ijOyAbg7L._AC_UF1000,1000_QL80_.jpg",
-    prodType: "Accessories",
-  },
-  {
-    id: 3,
-    prodName: "Cat Feather Toy",
-    prodPrice: 200,
-    prodDescription: "It's a scratchy scratcher",
-    prodImg:
-      "https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/51ijOyAbg7L._AC_UF1000,1000_QL80_.jpg",
-    prodType: "Accessories",
-  },
-  {
-    id: 3,
-    prodName: "Cat Feather Toy",
-    prodPrice: 200,
-    prodDescription: "It's a scratchy scratcher",
-    prodImg:
-      "https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/51ijOyAbg7L._AC_UF1000,1000_QL80_.jpg",
-    prodType: "Accessories",
-  },
   //FOODS
   {
     id: 4,
