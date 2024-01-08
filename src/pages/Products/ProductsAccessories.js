@@ -15,14 +15,17 @@ const prodInfo = prodAccessories.map((prod) => {
 });
 
 
-    return(
-        <div>
-            <Navbar/>
-            <Hero/>
-            <h1>Products</h1>
-            <div className='products-grid'>
-                {prodInfo}
-            </div>
+    return (
+      <div>
+        <Navbar />
+        <Hero />
+        <h1 className="container mx-auto px-10 py-8 text-2xl font-semibold">
+          Cat Accessories
+        </h1>
+
+        <div className="container mx-auto px-10 pb-5 grid grid-cols-5 gap-3">
+          {prodInfo}
         </div>
-    )
+      </div>
+    );
 }
