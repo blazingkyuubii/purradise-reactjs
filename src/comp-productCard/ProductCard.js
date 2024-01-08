@@ -1,25 +1,24 @@
-import './ProductCard.css'
+//router
+import { Link } from "react-router-dom";
 
-export default function ProductCard({isFeatured, prod}){
+export default function ProductCard({isFeatured, prod, linkTo}){
     
-    const defaultStyle = {
-        padding: '10%',
-        border: '1px solid rgb(221, 220, 220)',
-        textAlign: 'center',   
-    }
+    const defaultStyle = "shadow-md px-10 py-5 border border-solid border-stone-200"
+    const featuredStyle = "shadow-md px-10 py-5 border border-solid border-stone-200"
 
-    const featuredStyle = {
-        backgroundColor: '#d64105'
-    }
+    const defaultImgSize = "mx-auto w-75 h-60";
+    const featuredImgSize = "mx-auto w-80 h-60";
 
-    const cardStyle = isFeatured ? {...defaultStyle, ...featuredStyle} : defaultStyle
+    const cardStyle = isFeatured ? `${defaultStyle} ${featuredStyle}` : defaultStyle
+    const imgSize = isFeatured ? `${defaultImgSize} ${featuredImgSize}` : defaultImgSize
 
-    return(
-        <div className="product-card-container" style={cardStyle}>
-            <img className="product-image" src={prod.prodImg} alt="product"/>
-            <p>{prod.prodName}</p>
-            <p>₱ {prod.prodPrice}</p>
-            <button>Add to Cart</button>
+    return (
+      <Link to={linkTo}>
+        <div className={cardStyle}>
+          <img className={imgSize} src={prod.prodImg} alt="product" />
+          <p className=" mt-2 text-lg font-bold">{prod.prodName}</p>
+          <p className="font-semibold">₱ {prod.prodPrice}</p>
         </div>
-    )
+      </Link>
+    );
 }
