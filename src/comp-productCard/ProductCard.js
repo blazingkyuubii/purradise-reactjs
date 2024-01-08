@@ -16,8 +16,8 @@ export default function ProductCard({isFeatured, prod, linkTo}){
       <Link to={`/product/${prod.id}`}>
         <div className={cardStyle}>
           <img className={imgSize} src={prod.prodImg} alt="product" />
-          <p className=" mt-2 text-lg font-bold">{prod.prodName}</p>
-          <p className="font-semibold">₱ {prod.prodPrice}</p>
+          <p className=" mt-2 text-lg">{prod.prodName}</p>
+          <p>₱ {prod.prodPrice}</p>
         </div>
       </Link>
     );
