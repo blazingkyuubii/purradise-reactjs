@@ -2,9 +2,19 @@ footer{
     background-color: gray;
     display: flex;
     align-items: center;
-    justify-content: center;
-    position: fixed;
+    justify-content: space-between;
+    padding: 60px;
+    padding-left: 80px;
+    padding-right: 80px;
     bottom: 0;
     width: 100%;
     max-width: 100%;
+}
+
+li{
+    margin-top: 10px;
+}
+
+h1{
+    font-size: x-large;
 }

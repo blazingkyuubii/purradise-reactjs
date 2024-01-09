@@ -28,6 +28,18 @@ export default function Home() {
     return <ProductCard key={prod.id} prod={prod} isFeatured={prod.isFeatured} linkTo={'/item'} />;
   });
 
+  const categories = [
+    {linkTo:"/accessories", imgSrc: catAccessories, imgAlt:"Cat Accessory Category", isPortrait:true},
+    {linkTo:"/foods", imgSrc: catFood, imgAlt:"Cat Food Category", isPortrait:true},
+    {linkTo:"/litters", imgSrc: catLitter, imgAlt:"Cat Litter Category", isPortrait:true},
+    {linkTo:"/toys", imgSrc: catToys, imgAlt:"Cat Toys Category", isPortrait:true},
+    {linkTo:"/vitamins", imgSrc: catVitamins, imgAlt:"Cat Vitamins Category", isPortrait:true},
+  ]
+
+  const categoryCards = categories.map((category, index) => 
+    <CategoryCard key={index} {...category} />
+  )
+
   return (
     <div>
       <Navbar />
@@ -36,11 +48,7 @@ export default function Home() {
       {/* Category Section */}
       <h1 className="container mx-auto px-10 py-8 text-2xl font-semibold">Shop by Category</h1>
       <div className="container mx-auto px-10 grid grid-cols-5 gap-3">
-      <CategoryCard linkTo="/accessories" imgSrc={catAccessories} imgAlt="Cat Accessory Category" isPortrait={true}/>
-      <CategoryCard linkTo="/foods" imgSrc={catFood} imgAlt="Cat Food Category" isPortrait={true}/>
-      <CategoryCard linkTo="/litters" imgSrc={catLitter} imgAlt="Cat Litter Category" isPortrait={true}/>
-      <CategoryCard linkTo="/toys" imgSrc={catToys} imgAlt="Cat Toys Category" isPortrait={true}/>
-      <CategoryCard linkTo="/vitamins" imgSrc={catVitamins} imgAlt="Cat Vitamins Category" isPortrait={true}/>
+        {categoryCards}
       </div>
 
       {/* Featured Products Section */}
@@ -66,7 +74,7 @@ export default function Home() {
       <CategoryCard linkTo="/foods" imgSrc={servVet} imgAlt="Cat Food Category"/>
       </div>
       
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   );
 }
