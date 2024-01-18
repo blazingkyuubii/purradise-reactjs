@@ -9,6 +9,7 @@ import Footer from "../../comp-footer/Footer";
 import CategoryCard from "../../comp-categoryCard/CategoryCard";
 import productData from "../../productData";
 import ProductCard from "../../comp-productCard/ProductCard";
+import Cart from "../../comp-cart/Cart"
 
 
 //categories img src
@@ -46,7 +47,7 @@ export default function Home() {
       <Hero />
 
       {/* Category Section */}
-      <h1 className="container mx-auto px-10 py-8 text-2xl font-semibold">Shop by Category</h1>
+      <h1 id='categories' className="container mx-auto px-10 py-8 text-2xl font-semibold">Shop by Category</h1>
       <div className="container mx-auto px-10 grid grid-cols-5 gap-3">
         {categoryCards}
       </div>

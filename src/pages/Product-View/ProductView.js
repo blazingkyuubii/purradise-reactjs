@@ -3,6 +3,7 @@ import Navbar from "../../comp-navbar/Navbar";
 import { useParams } from "react-router-dom";
 import Footer from "../../comp-footer/Footer";
 import productData from "../../productData";
+import Cart from "../../comp-cart/Cart";
 
 import cashback from "./icon-cashback.png"
 import expert from "./icon-expert.png";
@@ -11,6 +12,39 @@ import premium from "./icon-premium.png";
 export default function ProductView() {
   const { productId } = useParams();
   const [product, setProduct] = useState(null);
+  const [quantity, setQuantity] = useState(1);
+  const [cartItems, setCartItems] = useState([]);
+
+  const addToCart = () => {
+    const newItem = {
+      id: product.id,
+      name: product.prodName,
+      price: product.prodPrice,
+      quantity: quantity,
+    };
+
+    // Get the current cart items from local storage
+    const currentCartItems =
+      JSON.parse(localStorage.getItem("cartItems")) || [];
+
+    // Check if the item is already in the cart
+    const existingItemIndex = currentCartItems.findIndex(
+      (item) => item.id === newItem.id
+    );
+
+    if (existingItemIndex !== -1) {
+      // If the item exists, update the quantity
+      currentCartItems[existingItemIndex].quantity += quantity;
+    } else {
+      // If the item doesn't exist, add it to the cart
+      currentCartItems.push(newItem);
+    }
+
+    // Save the updated cart items to local storage
+    localStorage.setItem("cartItems", JSON.stringify(currentCartItems));
+  };
+
+
 
   useEffect(() => {
     // Find the product in productData based on productId
@@ -22,15 +56,14 @@ export default function ProductView() {
     setProduct(selectedProduct);
   }, [productId]);
 
-  const [quantity, setQuantity] = useState(0)
-  function addQty(){
-    setQuantity(prevQty => prevQty + 1)
-  }  
-
-  function minusQty(){
-    setQuantity(prevQty => prevQty - 1)
+  function addQty() {
+    setQuantity((prevQty) => prevQty + 1);
   }
 
+  function minusQty() {
+    if(quantity > 0)
+    setQuantity((prevQty) => prevQty - 1);
+  }
 
   // If the product is not found return loading..
   if (!product) {
@@ -43,7 +76,11 @@ export default function ProductView() {
       <div className="p-12 grid grid-cols-2 mx-auto">
         {/* image */}
         <div className="max-w-600 max-h-600 mx-1 border border-solid border-stone-500">
-          <img className='w-full h-full object-contain' src={product.prodImg} alt={product.prodName} />
+          <img
+            className="w-full h-full object-contain"
+            src={product.prodImg}
+            alt={product.prodName}
+          />
         </div>
 
         {/* product info */}
@@ -57,7 +94,10 @@ export default function ProductView() {
           <p className="mb-1">Quantity</p>
           {/* quantity button  */}
           <div className="relative mb-5">
-            <button onClick={minusQty} className="bg-blue-500 text-white px-4 py-2 rounded-l focus:outline-none focus:shadow-outline-blue active:bg-blue-700">
+            <button
+              onClick={minusQty}
+              className="bg-blue-500 text-white px-4 py-2 rounded-l focus:outline-none focus:shadow-outline-blue active:bg-blue-700"
+            >
               -
             </button>
             <input
@@ -65,11 +105,17 @@ export default function ProductView() {
               className="border-l border-r w-8 text-center"
               value={quantity}
             />
-            <button onClick={addQty} className="bg-blue-500 text-white px-4 py-2 rounded-r focus:outline-none focus:shadow-outline-blue active:bg-blue-700">
+            <button
+              onClick={addQty}
+              className="bg-blue-500 text-white px-4 py-2 rounded-r focus:outline-none focus:shadow-outline-blue active:bg-blue-700"
+            >
               +
             </button>
           </div>
-          <button className="bg-pink-400 rounded py-2 px-3 text-md mb-20">
+          <button
+            onClick={addToCart}
+            className="bg-pink-400 rounded py-2 px-3 text-md mb-20"
+          >
             Add To Cart
           </button>
 
@@ -92,7 +138,7 @@ export default function ProductView() {
           {/* end */}
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

@@ -12,9 +12,13 @@ function Navbar(){
 
         <div className="nav-items">
           <ul>
-            <li>Login/Signup</li>
+            <Link to="/testEnv">
+              <li>Test Environment</li>
+            </Link>
             <li>Services</li>
+            <Link to="/cart">
             <li>My Cart</li>
+            </Link>
           </ul>
         </div>
       </nav>
