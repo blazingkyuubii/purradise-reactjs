@@ -6,12 +6,14 @@ import { createBrowserRouter } from "react-router-dom";
 
 //page imports
 import Home from "../pages/Home/Home";
+import TestEnv from "../pages/Home/TestEnv";
 import ProductsAccessories from "../pages/Products/ProductsAccessories";
 import ProductsFood from "../pages/Products/ProductsFood";
 import ProductsLitter from "../pages/Products/ProductsLitter"
 import ProductsToys from "../pages/Products/ProductsToys";
 import ProductsVitamins from "../pages/Products/ProductsVitamins";
 import ProductView from "../pages/Product-View/ProductView";
+import Cart from "../comp-cart/Cart";
 
 export const router = createBrowserRouter([
   {
@@ -41,6 +43,14 @@ export const router = createBrowserRouter([
   {
     path: "/product/:productId",
     element: <ProductView/>
+  },
+  {
+    path: "/testEnv",
+    element: <TestEnv />
+  },
+  {
+    path: "/cart",
+    element: <Cart/>
   }
 ]);
 

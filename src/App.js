@@ -1,14 +1,14 @@
-import logo from './logo.svg'
-import './App.css'
-import React from "react";
+// App.js
+import React, { useState } from "react";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./routes/Routes";
-
 
 function App() {
 
   return (
-    <RouterProvider router={router} />
+    <div>
+      <RouterProvider router={router} />
+    </div>
   );
 }
 
