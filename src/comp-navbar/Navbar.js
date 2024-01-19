@@ -1,28 +1,33 @@
 import logo from "./arslogo.png";
-import './Navbar.css';
-import {Link} from 'react-router-dom'
+import "./Navbar.css";
+import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import Cart from "../comp-cart/Cart";
 
-function Navbar(){
-    return (
-      <nav>
-        <img className="nav-logo" src={logo} />
-        <Link to="/">
-          <h1 className="nav-title">Purradise</h1>
-        </Link>
+function Navbar() {
 
-        <div className="nav-items">
-          <ul>
-            <Link to="/testEnv">
-              <li>Test Environment</li>
-            </Link>
-            <li>Services</li>
+  return (
+    <nav>
+      <img className="nav-logo" src={logo} alt="Logo" />
+      <Link to="/">
+        <h1 className="nav-title">Purradise</h1>
+      </Link>
+
+      <div className="nav-items">
+        <ul>
+          <Link to="/testEnv">
+            <li>Test Environment</li>
+          </Link>
+          <li>Services</li>
+          <li>
             <Link to="/cart">
-            <li>My Cart</li>
+              <button>My Cart</button>
             </Link>
-          </ul>
-        </div>
-      </nav>
-    );
+          </li>
+        </ul>
+      </div>
+    </nav>
+  );
 }
 
-export default Navbar
+export default Navbar;
