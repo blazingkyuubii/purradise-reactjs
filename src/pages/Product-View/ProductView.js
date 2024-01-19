@@ -13,13 +13,14 @@ export default function ProductView() {
   const { productId } = useParams();
   const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
-  const [cartItems, setCartItems] = useState([]);
+  // const [cartItems, setCartItems] = useState([]);
 
   const addToCart = () => {
     const newItem = {
       id: product.id,
       name: product.prodName,
       price: product.prodPrice,
+      image: product.prodImg,
       quantity: quantity,
     };
 
