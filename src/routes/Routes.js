@@ -14,6 +14,7 @@ import ProductsToys from "../pages/Products/ProductsToys";
 import ProductsVitamins from "../pages/Products/ProductsVitamins";
 import ProductView from "../pages/Product-View/ProductView";
 import Cart from "../comp-cart/Cart";
+import VetServ from '../pages/Services/VetServ';
 
 export const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ export const router = createBrowserRouter([
   {
     path: "/cart",
     element: <Cart/>
+  },
+  {
+    path: "/service-vet",
+    element: <VetServ/>
   }
 ]);
 

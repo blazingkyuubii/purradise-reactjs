@@ -71,7 +71,7 @@ export default function Home() {
       {/* Other Services Section */}
       <h1 className='container mx-auto px-10 py-8 text-2xl font-semibold'>Other Services</h1>
       <div className="container mx-auto px-10 grid grid-cols-2 gap-3">
-      <CategoryCard linkTo="/accessories" imgSrc={servGrooming} imgAlt="Cat Accessory Category"/>
+      <CategoryCard linkTo="/service-vet" imgSrc={servGrooming} imgAlt="Cat Accessory Category"/>
       <CategoryCard linkTo="/foods" imgSrc={servVet} imgAlt="Cat Food Category"/>
       </div>
       
