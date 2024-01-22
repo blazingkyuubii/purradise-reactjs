@@ -3,9 +3,13 @@
 }
 
 #calendar{
-    border: 2px yellow solid;
+    /* border: 2px yellow solid; */
 width: 400px;
     /* Set your preferred width */
     height: 400px;
     /* Set your preferred height */
+}
+
+ul{
+    color: purple;
 }
