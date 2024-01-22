@@ -1,36 +1,127 @@
 import Navbar from "../../comp-navbar/Navbar";
 import Hero from "../../comp-hero/Hero";
 import Footer from "../../comp-footer/Footer";
+import Table from "../../comp-table/Table";
 import './calendar.css'
 import React, { useState } from "react";
 import { Day, DayPicker } from "react-day-picker";
 import { format, isSunday } from "date-fns";
+import { Disclosure } from "@headlessui/react";
 import "react-day-picker/dist/style.css";
 
-export default function VetServ(){
+//images
+import doctor1 from "./doc1.jpg"
+import doctor2 from "./doc2.png";
+import doctor3 from "./doc3.png";
 
+export default function VetServ(){
     const [selectedDay, setSelectedDay] = useState()
 
     return (
-      <div>
+      <div className="">
         <Navbar />
         <Hero />
-        <h1>Make an appointment today!</h1>
-        <div className="grid grid-cols-2 p-10">
-          <div id="calendar">
-            <DayPicker
-          mode="single"
-          selected={selectedDay}
-          onSelect={setSelectedDay}
-          disabled={isSunday}
-          className="calendar-style"
-        />
+        {/* ABOUT VET */}
+        <div id="content" className="px-10">
+          <h1>About Purradise Veterinary </h1>
+          <p>
+            "At Purradise, we are dedicated to ensuring the health and happiness
+            of your feline companions. Our veterinary services go beyond just
+            treating illnesses – we provide comprehensive care to support your
+            cat's well-being. Our team of experienced and compassionate
+            veterinarians is here to offer routine check-ups, vaccinations, and
+            preventive care to keep your furry friend in the best possible
+            shape. We understand that each cat is unique, so we take the time to
+            tailor our services to meet their individual needs."
+          </p>
+          {/* ABOUT DOCTORS */}
+          <h1 className="mt-10">Our Resident Doctors</h1>
+          <div className="flex flex-row justify-center gap-10">
+            <div className="flex flex-col items-center">
+              <img
+                className=" rounded-full w-80 h-80 drop-shadow-lg"
+                src={doctor1}
+                alt="doc1"
+              />
+              <p className="text-xs mt-2">Dr. Lawrence Caraig, DVM</p>
+            </div>
+
+            <div className="flex flex-col items-center">
+              <img
+                className=" rounded-full w-80 h-80 drop-shadow-lg"
+                src={doctor2}
+                alt="doc2"
+              />
+              <p className="text-xs mt-2">Dr. Carl Sarmiento</p>
+            </div>
+
+            <div className="flex flex-col items-center">
+              <img
+                className=" rounded-full w-80 h-80 drop-shadow-lg"
+                src={doctor3}
+                alt="doc3"
+              />
+              <p className="text-xs mt-2">Dr. Princess Mae Cruz</p>
+            </div>
           </div>
-          <div id="input-form" className="flex flex-col">
-            <input type="text" placeholder="Full Name" />
-            <input type="text" placeholder="Contact Number" />
-            <input type="text" placeholder="Email Address" />
-            <input type="text" placeholder="Appointment Date" disabled />
+          {/* VET SERVICES */}
+          <h1 className="mt-10">Our Services</h1>
+          <div>
+            <Disclosure>
+              <Disclosure.Button className="p-10 w-full border border-red-300 py-2">
+                Click to open
+              </Disclosure.Button>
+              <Disclosure.Panel className="p-5 border border-blue-300 text-gray-500">
+                <Table />
+              </Disclosure.Panel>
+            </Disclosure>
+          </div>
+          {/* SET APPOINTMENT */}
+          <h1 className="mt-10">Make an appointment today!</h1>
+          <div id="calendar" className="flex flex-row">
+            <div id="calendar">
+              <DayPicker
+                mode="single"
+                selected={selectedDay}
+                onSelect={setSelectedDay}
+                disabled={isSunday}
+                className="calendar-style"
+              />
+            </div>
+            <div id="input-form" className="p-5">
+              <label htmlFor="name">Full Name</label>
+              <input
+                id="name"
+                className="p-1 mb-3 border border-blue-400"
+                type="text"
+                placeholder="Full Name"
+              />
+
+              <label htmlFor="contact">Contact Number</label>
+              <input
+                id="contact"
+                className="p-1 mb-3 border border-blue-400"
+                type="text"
+                placeholder="Contact Number"
+              />
+
+              <label htmlFor="email">Email Address</label>
+              <input
+                id="email"
+                className="p-1 mb-3 border border-blue-400"
+                type="text"
+                placeholder="Email Address"
+              />
+
+              <label htmlFor="date">Appointment Date</label>
+              <input
+                id="date"
+                className="p-1 border border-blue-400"
+                type="text"
+                placeholder="Appointment Date"
+                disabled
+              />
+            </div>
           </div>
         </div>
         <Footer />
