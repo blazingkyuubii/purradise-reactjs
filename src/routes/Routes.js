@@ -15,6 +15,7 @@ import ProductsVitamins from "../pages/Products/ProductsVitamins";
 import ProductView from "../pages/Product-View/ProductView";
 import Cart from "../comp-cart/Cart";
 import VetServ from '../pages/Services/VetServ';
+import GroomServ from '../pages/Services/GroomServ';
 
 export const router = createBrowserRouter([
   {
@@ -56,6 +57,10 @@ export const router = createBrowserRouter([
   {
     path: "/service-vet",
     element: <VetServ/>
+  },
+  {
+    path: "/service-groom",
+    element: <GroomServ/>
   }
 ]);
 
