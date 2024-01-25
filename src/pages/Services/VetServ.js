@@ -7,7 +7,7 @@ import React, { useState } from "react";
 import { Day, DayPicker } from "react-day-picker";
 import { format, isSunday } from "date-fns";
 import { Disclosure } from "@headlessui/react";
-import "react-day-picker/dist/style.css";
+import 'react-day-picker/dist/style.css'
 
 //images
 import doctor1 from "./doc1.jpg"
@@ -78,7 +78,7 @@ export default function VetServ(){
           </div>
           {/* SET APPOINTMENT */}
           <h1 className="mt-10">Make an appointment today!</h1>
-          <div id="calendar" className="flex flex-row">
+          <div id="calendar" className="flex flex-row justify-center">
             <div id="calendar">
               <DayPicker
                 mode="single"
@@ -88,11 +88,11 @@ export default function VetServ(){
                 className="calendar-style"
               />
             </div>
-            <div id="input-form" className="p-5">
+            <div id="input-form" className="flex flex-col py-4 w-1/2">
               <label htmlFor="name">Full Name</label>
               <input
                 id="name"
-                className="p-1 mb-3 border border-blue-400"
+                className="p-1 w-full mb-1 border border-blue-400"
                 type="text"
                 placeholder="Full Name"
               />
@@ -100,7 +100,7 @@ export default function VetServ(){
               <label htmlFor="contact">Contact Number</label>
               <input
                 id="contact"
-                className="p-1 mb-3 border border-blue-400"
+                className="p-1 mb-1 border border-blue-400"
                 type="text"
                 placeholder="Contact Number"
               />
@@ -108,7 +108,7 @@ export default function VetServ(){
               <label htmlFor="email">Email Address</label>
               <input
                 id="email"
-                className="p-1 mb-3 border border-blue-400"
+                className="p-1 mb-1 border border-blue-400"
                 type="text"
                 placeholder="Email Address"
               />
@@ -116,15 +116,21 @@ export default function VetServ(){
               <label htmlFor="date">Appointment Date</label>
               <input
                 id="date"
-                className="p-1 border border-blue-400"
+                className="p-1 mb-1 border border-blue-400"
                 type="text"
                 placeholder="Appointment Date"
+                value={selectedDay ? format(selectedDay, "PPP") : ""}
                 disabled
               />
+
+              <button className="p-1 border border-blue-400">
+                Book Appointment
+              </button>
             </div>
           </div>
         </div>
         <Footer />
+      {console.log(selectedDay)}
       </div>
     );
 }

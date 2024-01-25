@@ -1,15 +1,4 @@
 .calendar-style{
     border: 2px red solid;
-}
-
-#calendar{
-    /* border: 2px yellow solid; */
-width: 400px;
-    /* Set your preferred width */
-    height: 400px;
-    /* Set your preferred height */
-}
-
-ul{
-    color: purple;
+    font-size: 1.5rem;
 }
