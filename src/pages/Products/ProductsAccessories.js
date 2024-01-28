@@ -24,7 +24,7 @@ const prodInfo = prodAccessories.map((prod) => {
           Cat Accessories
         </h1>
 
-        <div className="container mx-auto px-10 pb-5 grid grid-cols-5 gap-3">
+        <div className="container mx-auto px-10 grid grid-cols-5">
           {prodInfo}
         </div>
 
