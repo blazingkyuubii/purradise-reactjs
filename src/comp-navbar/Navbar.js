@@ -2,12 +2,10 @@ import logo from "./arslogo.png";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
-import Cart from "../comp-cart/Cart";
 
 function Navbar() {
-
   return (
-    <nav>
+    <nav className="flex flex-start items-center shadow-md shadow-stone-200 bg-dark-green p-5">
       <img className="nav-logo" src={logo} alt="Logo" />
       <Link to="/">
         <h1 className="nav-title">Purradise</h1>
