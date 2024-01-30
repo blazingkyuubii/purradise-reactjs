@@ -15,6 +15,7 @@ import catToys from "../../comp-categoryCard/ctg-toys-icon.png";
 import catVitamins from "../../comp-categoryCard/ctg-wlns-icon.png";
 import servGrooming from "../../comp-categoryCard/serv-grooming.png";
 import servVet from "../../comp-categoryCard/serv-vet.png";
+import bannerPic from "./banner-pic.png"
 
 export default function Home() {
 
@@ -40,6 +41,42 @@ export default function Home() {
     <div>
       <Navbar />
       <Hero />
+
+      {/* Brand Collection Section */}
+      <div id="brand" className="bg-weed-green-200">
+        <div className="bg-dark-green text-weed-green-200 px-10 py-10 grid grid-cols-2 gap-1">
+          <div className="px-5">
+            <h1 className="mt-5 font-bold text-2xl">
+              A Feline's Rest, Purradise.
+            </h1>
+            <p className="mt-5">
+              We take pride in crafting products that are free from artificial
+              additives and preservatives, ensuring that every offering is a
+              testament to the purity of nature. Our dedication to your cat's
+              well-being extends beyond the ingredients – it's a philosophy
+              ingrained in every facet of our creations. Furthermore, our
+              top-notch services are a reflection of a meticulous hiring process
+              where the owner personally selects employees. This ensures that
+              each member of our team shares a passion for feline care and
+              embodies the values of Purradise.
+            </p>
+            <button
+              type="submit"
+              className="mt-8 flex w-50 items-center justify-center rounded-md border border-transparent bg-weed-green-200 text-black px-8 py-3 text-base font-medium text-white hover:bg-weed-green-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+            >
+              More About Purradise
+            </button>
+          </div>
+          <div>
+            <img
+              className="max-h-96 max-w-full"
+              src={bannerPic}
+              alt="Cat Accessory Category"
+            />
+          </div>
+        </div>
+      </div>
+
       <div className="bg-weed-green-200">
         {/* Category Section */}
         <div id="category">
@@ -61,32 +98,6 @@ export default function Home() {
           </h1>
           <div className="container mx-auto px-10 grid grid-cols-5 gap-3">
             {prodInfo}
-          </div>
-        </div>
-
-        {/* Brand Collection Section */}
-        <div id="brand">
-          <div className="rounded bg-amber-600 mx-10 mt-10 px-10 py-10 grid grid-cols-2 gap-1">
-            <div className="px-5">
-              <h1 className="mt-5 font-bold text-2xl">
-                The Purradise Collection
-              </h1>
-              <p className="mt-5">
-                Handcrafted products with love from Purradise itself.
-              </p>
-              <button
-                type="submit"
-                className="mt-8 flex w-50 items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-              >
-                Shop Now
-              </button>
-            </div>
-            <div>
-              <img
-                src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/grocery-sale-retail-or-e-commerce-banner-ad-design-template-67720435bb809be27f46dfb1dd44c6fa_screen.jpg?ts=1606113265"
-                alt="Cat Accessory Category"
-              />
-            </div>
           </div>
         </div>
 

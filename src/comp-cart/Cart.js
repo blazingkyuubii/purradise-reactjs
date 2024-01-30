@@ -56,86 +56,97 @@ useEffect(() => {
   };
 
   return (
-    <div>
+    <div className=" bg-weed-green-200">
       <Navbar />
-      <h1 className="m-5">Shopping Cart</h1>
+      <div>
+        <h1 className="px-20 my-5">Your Shopping Cart</h1>
+        <div id="cart-container" className=" px-20">
+          <div
+            id="cart-header"
+            className="bg-white rounded-t-md border border-gray-400 flex flex-row gap-40 px-5 justify-end"
+          >
+            <p>Unit Price</p>
+            <p>Quantity</p>
+            <p>Total Price</p>
+            <p>Actions</p>
+          </div>
 
-      <div id="cart-container" className=" px-20">
-        <div
-          id="cart-header"
-          className="border border-gray-400 flex flex-row gap-40 px-5 justify-end"
-        >
-          <p>Unit Price</p>
-          <p>Quantity</p>
-          <p>Total Price</p>
-          <p>Actions</p>
-        </div>
+          {cartItems.map((product) => {
+            const totalItemPrice = product.price * itemQuantity[product.id];
+            totalPrice += totalItemPrice;
 
-        {cartItems.map((product) => {
-        const totalItemPrice = product.price * (itemQuantity[product.id]);
-        totalPrice += totalItemPrice;
-
-          return (
-            <div
-              key={product.id}
-              id="cart-items-container"
-              className=" flex flexbox-col border border-gray-400 py-10"
-            >
+            return (
               <div
-                id="item-name-image"
-                className="flex flexbox-col px-3 gap-5 place-items-center"
+                key={product.id}
+                id="cart-items-container"
+                className=" flex flexbox-col bg-white border border-gray-400 py-10"
               >
-                <img
-                  className="w-32 h-32 border border-red-400"
-                  src={product.image}
-                />
-                <p>{product.name}</p>
-              </div>
-
-              <div
-                id="item-info"
-                className="flex flex-row gap-40 ml-auto px-3 place-items-center text-base"
-              >
-                <p>₱{product.price}</p>
-
-                <div id="item-info-qty">
-                  <button
-                    onClick={() => minusQty(product.id)}
-                    className="bg-blue-500 text-white px-4 py-2 rounded-l focus:outline-none focus:shadow-outline-blue active:bg-blue-700"
-                  >
-                    -
-                  </button>
-                  <input
-                    type="text"
-                    className="border-l border-r w-8 text-center"
-                    value={itemQuantity[product.id]}
+                <div
+                  id="item-name-image"
+                  className="flex flexbox-col px-3 gap-5 place-items-center"
+                >
+                  <img
+                    className="w-32 h-32 border border-red-400"
+                    src={product.image}
                   />
-                  <button
-                    onClick={() => addQty(product.id)}
-                    className="bg-blue-500 text-white px-4 py-2 rounded-r focus:outline-none focus:shadow-outline-blue active:bg-blue-700"
-                  >
-                    +
-                  </button>
+                  <p>{product.name}</p>
                 </div>
 
-                <p>₱{totalItemPrice}</p>
-                <button
-                  className="border border-orange-400 hover:bg-orange-400 p-1 rounded"
-                  onClick={() => removeItem(product.id)}
+                <div
+                  id="item-info"
+                  className="flex flex-row gap-40 ml-auto px-3 place-items-center text-base"
                 >
-                  Remove
-                </button>
+                  <p>₱{product.price}</p>
+
+                  <div id="item-info-qty">
+                    <button
+                      onClick={() => minusQty(product.id)}
+                      className="bg-dark-green text-white px-3 py-1 rounded-l focus:outline-none focus:shadow-outline-blue active:bg-weed-green-400"
+                    >
+                      -
+                    </button>
+                    <input
+                      type="text"
+                      className="border border-dark-green h-8  w-8 text-center"
+                      value={itemQuantity[product.id]}
+                      readOnly={true}
+                    />
+                    <button
+                      onClick={() => addQty(product.id)}
+                      className="bg-dark-green text-white px-3 py-1 rounded-r focus:outline-none focus:shadow-outline-blue active:bg-weed-green-400"
+                    >
+                      +
+                    </button>
+                  </div>
+
+                  <p>₱{totalItemPrice}</p>
+                  <button
+                    className="border border-dark-green hover:bg-dark-green p-1 rounded hover:text-weed-green-200"
+                    onClick={() => removeItem(product.id)}
+                  >
+                    Remove
+                  </button>
+                </div>
+              </div>
+            );
+          })}
+          <div className="rounded-b-md border border-gray-400 bg-white flex flex-col p-5">
+            <div className="flex flex-row gap-6 text-xl text-start justify-end">
+              <div>
+                <p>Order Total:</p>
+                <p>Shipping Fee:</p>
+                <p>Total Payment:</p>
+              </div>
+              <div>
+                <p>₱{totalPrice}</p>
+                <p>₱100</p>
+                <p>₱{totalPrice + 100}</p>
               </div>
             </div>
-          );
-        })}
-        <div className="border border-gray-400 whitespace-pre-wrap p-5 text-xl text-end">
-          <p>Order Total:   ₱ {totalPrice}</p>
-          <p>Shipping Fee:  ₱ 100</p>
-          <p>Total Payment:   ₱ {totalPrice + 100}</p>
-          <button className="border border-red-400 hover:bg-red-400 p-1 mt-5">
-            Checkout
-          </button>
+            <button className="border border-dark-green bg-dark-green text-weed-green-200 p-1 mt-5 rounded">
+              Checkout
+            </button>
+          </div>
         </div>
       </div>
       <Footer />
