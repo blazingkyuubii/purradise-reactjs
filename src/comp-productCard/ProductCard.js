@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function ProductCard({isFeatured, prod, linkTo}){
     
-    const defaultStyle =
-      "border border-gray-100 hover:shadow-lg px-10 py-5";
+    const defaultStyle = "border border-gray-100 bg-white hover:shadow-lg px-10 py-5";
     const featuredStyle = "shadow-md px-10 py-5"
 
     const defaultImgSize = "mx-auto w-60 h-60";

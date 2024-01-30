@@ -15,7 +15,7 @@ module.exports = {
         "weed-green-500": "#586f56",
         "weed-green-400": "#738d76",
         "weed-green-300": "#8ba189",
-        "weed-green-200": "#a5a39a",
+        "weed-green-200": "#f4f1e9",
         "weed-green-100": "#b2a59a",
         "dark-green": "#005431",
       },
