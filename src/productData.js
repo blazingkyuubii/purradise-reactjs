@@ -5,7 +5,7 @@ prodPrice:,
 prodDescription:,
 prodImg:,
 prodType:,
-isFeatured:,
+isFeatured: "true",
 
 */
 
@@ -104,6 +104,7 @@ export default [
     prodDescription: "desc",
     prodImg: accessories_images[8],
     prodType: "Accessories",
+    isFeatured: "true",
   },
   {
     id: 11,
@@ -152,6 +153,7 @@ export default [
     prodDescription: "desc",
     prodImg: accessories_images[14],
     prodType: "Accessories",
+    isFeatured: "true",
   },
   {
     id: 17,
@@ -201,6 +203,7 @@ export default [
     prodDescription: "desc",
     prodImg: foods_images[4],
     prodType: "Foods",
+    isFeatured: "true",
   },
   {
     id: 23,
@@ -370,6 +373,7 @@ export default [
     prodDescription: "desc",
     prodImg: toys_images[6],
     prodType: "Toys",
+    isFeatured: "true",
   },
   {
     id: 42,

@@ -20,15 +20,15 @@ const prodInfo = prodAccessories.map((prod) => {
       <div>
         <Navbar />
         <Hero />
-        <h1 className="container mx-auto px-10 py-8 text-2xl">
-          Cat Accessories
-        </h1>
-
-        <div className="container mx-auto px-10 grid grid-cols-5">
-          {prodInfo}
+        <div className="bg-weed-green-200">
+          <h1 className="container mx-auto px-10 py-8 text-2xl font-semibold">
+            Cat Accessories
+          </h1>
+          <div className="container mx-auto px-10 pb-5 grid grid-cols-5">
+            {prodInfo}
+          </div>
         </div>
-
-        <Footer/>
+        <Footer />
       </div>
     );
 }
