@@ -62,7 +62,7 @@ export default function Home() {
             </p>
             <button
               type="submit"
-              className="mt-8 flex w-50 items-center justify-center rounded-md border border-transparent bg-weed-green-200 text-black px-8 py-3 text-base font-medium text-white hover:bg-weed-green-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              className="mt-8 flex w-50 items-center justify-center rounded-md border border-transparent bg-weed-green-200 text-black px-8 py-3 text-base font-medium hover:text-white hover:bg-weed-green-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
             >
               More About Purradise
             </button>
@@ -109,12 +109,12 @@ export default function Home() {
           <div className="container mx-auto px-10 grid grid-cols-2 gap-3">
             <CategoryCard
               linkTo="/service-vet"
-              imgSrc={servGrooming}
+              imgSrc={servVet}
               imgAlt="Cat Accessory Category"
             />
             <CategoryCard
               linkTo="/service-groom"
-              imgSrc={servVet}
+              imgSrc={servGrooming}
               imgAlt="Cat Food Category"
             />
           </div>

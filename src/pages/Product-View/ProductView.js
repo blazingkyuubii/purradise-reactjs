@@ -72,11 +72,11 @@ export default function ProductView() {
   }
 
   return (
-    <div>
+    <div className="bg-weed-green-200">
       <Navbar />
       <div className="p-12 grid grid-cols-2 mx-auto">
         {/* image */}
-        <div className="max-w-600 max-h-600 mx-1 border border-solid border-stone-500">
+        <div className="max-w-600 max-h-600 mx-1 ">
           <img
             className="w-full h-full object-contain"
             src={product.prodImg}
