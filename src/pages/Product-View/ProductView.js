@@ -105,6 +105,7 @@ export default function ProductView() {
               type="text"
               className="border-l border-r w-8 text-center"
               value={quantity}
+              readOnly={true}
             />
             <button
               onClick={addQty}

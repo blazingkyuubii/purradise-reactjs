@@ -10,7 +10,7 @@ import { Disclosure } from "@headlessui/react";
 import 'react-day-picker/dist/style.css'
 
 //images
-import doctor1 from "./doc1.jpg"
+import doctor1 from "./doc1.png"
 import doctor2 from "./doc2.png";
 import doctor3 from "./doc3.png";
 
@@ -43,7 +43,7 @@ export default function VetServ(){
                 src={doctor1}
                 alt="doc1"
               />
-              <p className="text-xs mt-2">Dr. Lawrence Caraig, DVM</p>
+              <p className="text-xs mt-2">Dr. Kayla Bourbun</p>
             </div>
 
             <div className="flex flex-col items-center">
@@ -52,7 +52,7 @@ export default function VetServ(){
                 src={doctor2}
                 alt="doc2"
               />
-              <p className="text-xs mt-2">Dr. Carl Sarmiento</p>
+              <p className="text-xs mt-2">Dr. Kristine Garcia, DVM</p>
             </div>
 
             <div className="flex flex-col items-center">
@@ -61,7 +61,7 @@ export default function VetServ(){
                 src={doctor3}
                 alt="doc3"
               />
-              <p className="text-xs mt-2">Dr. Princess Mae Cruz</p>
+              <p className="text-xs mt-2">Dr. Tommy Santiago</p>
             </div>
           </div>
           {/* VET SERVICES */}
@@ -130,7 +130,7 @@ export default function VetServ(){
           </div>
         </div>
         <Footer />
-      {console.log(selectedDay)}
+        {console.log(selectedDay)}
       </div>
     );
 }

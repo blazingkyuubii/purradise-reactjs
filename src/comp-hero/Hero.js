@@ -19,7 +19,7 @@ export default function Hero() {
           Explore our exclusive range of toys, accessories, services, and more – all
           crafted and performed with love for your furry friends.
         </p>
-        <button onClick={() => scrollToSection("categories")} className="border border-orange-400 p-2 rounded mt-3 hover:bg-orange-300">Explore Purradise</button>
+        <button onClick={() => scrollToSection("categories")} className="border border-dark-green hover:bg-dark-green hover:text-weed-green-200 p-2 rounded mt-3">Explore Purradise</button>
       </div>
 
       <div className="flex justify-end"> 
