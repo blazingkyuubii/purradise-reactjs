@@ -16,7 +16,7 @@ export default function Footer(){
         - About Us
         - Store Locations
       */
-      <footer>
+      <footer className="bg-dark-green text-weed-green-200 flex items-center justify-between p-16 px-20 w-full max-w-full">
         <div>
           <p>Insert Logo Here</p>
           <p>Insert Copyright things here</p>
