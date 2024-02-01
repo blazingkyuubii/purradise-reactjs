@@ -1,8 +1,8 @@
-import logo from "./arslogo.png";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import React, { Fragment, useState } from "react";
 import { Menu } from "@headlessui/react";
+import logo from "../images/logo400.png";
 
 function Navbar() {
 
@@ -16,13 +16,8 @@ function Navbar() {
 
   return (
     <nav className="shadow-md shadow-stone-200 bg-dark-green flex flex-start items-center p-5">
-      <img
-        className="w-12 h-12 bg-gray-400 rounded-full lg:ms-2.5"
-        src={logo}
-        alt="Logo"
-      />
       <Link to="/">
-        <h1 className="nav-title">Purradise</h1>
+        <img className="w-22 h-16" src={logo} alt="Logo" />
       </Link>
 
       <div className="lg:hidden">
