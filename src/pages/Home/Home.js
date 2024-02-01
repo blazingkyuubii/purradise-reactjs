@@ -1,3 +1,10 @@
+//
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
 //component imports
 import Navbar from "../../comp-navbar/Navbar";
 import Hero from "../../comp-hero/Hero";
@@ -44,8 +51,8 @@ export default function Home() {
 
       {/* Brand Collection Section */}
       <div id="brand" className="bg-weed-green-200">
-        <div className="bg-dark-green text-weed-green-200 px-10 py-10 grid grid-cols-2 gap-1">
-          <div className="px-5">
+        <div className="bg-dark-green text-weed-green-200 flex flex-col lg:px-10 lg:py-10 lg:grid lg:grid-cols-2 gap-1">
+          <div className="px-5 order-2">
             <h1 className="mt-5 font-bold text-2xl">
               A Feline's Rest, Purradise.
             </h1>
@@ -62,16 +69,17 @@ export default function Home() {
             </p>
             <button
               type="submit"
-              className="mt-8 flex w-50 items-center justify-center rounded-md border border-transparent bg-weed-green-200 text-black px-8 py-3 text-base font-medium hover:text-white hover:bg-weed-green-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              className="w-full my-8 lg:my-0 lg:mt-8 lg:w-56 justify-center rounded-md bg-weed-green-200 text-black px-8 py-3 hover:text-white hover:bg-weed-green-400"
             >
               More About Purradise
             </button>
           </div>
+
           <div>
             <img
-              className="max-h-96 max-w-full"
+              className="order-1 mt-10 lg:mt-0 max-h-96 max-w-full"
               src={bannerPic}
-              alt="Cat Accessory Category"
+              alt="Purradise Doctors"
             />
           </div>
         </div>
@@ -82,31 +90,79 @@ export default function Home() {
         <div id="category">
           <h1
             id="categories"
-            className="container mx-auto px-10 py-8 text-2xl font-semibold"
+            className="container mx-auto px-5 pt-8 text-2xl font-semibold md:px-5 lg:px-10"
           >
             Shop by Category
           </h1>
-          <div className="container mx-auto px-10 grid grid-cols-5 gap-3">
-            {categoryCards}
+          {/*  mx-8 px-5 px-5 */}
+          <div className="mx-auto h-5/6 w-5/6 md:hidden lg:hidden">
+            <Swiper
+              slidesPerView={1}
+              spaceBetween={30}
+              loop={true}
+              pagination={{
+                clickable: true,
+              }}
+              navigation={true}
+              modules={[Pagination, Navigation]}
+              style={{
+                "--swiper-pagination-color": "#000000",
+                "--swiper-navigation-color": "#000000",
+              }}
+            >
+              <div>
+                {categoryCards.map((card, index) => (
+                  <SwiperSlide key={index}>{card}</SwiperSlide>
+                ))}
+              </div>
+            </Swiper>
           </div>
+        </div>
+
+        <div className="hidden lg:mx-auto lg:container lg:px-10 lg:grid lg:grid-cols-5 lg:gap-3  md:grid md:grid-cols-5 md:gap-3">
+          {categoryCards}
         </div>
 
         {/* Featured Products Section */}
         <div id="featuredProd">
-          <h1 className="container mx-auto px-10 py-8 text-2xl font-semibold">
+          <h1 className="container mx-auto px-5 pt-8 text-2xl font-semibold md:px-5 lg:px-10">
             Featured Products
           </h1>
-          <div className="container mx-auto px-10 grid grid-cols-5 gap-3">
+
+          <div className="pt-5 mx-auto h-5/6 w-5/6 md:hidden lg:hidden">
+            <Swiper
+              slidesPerView={1}
+              spaceBetween={30}
+              loop={true}
+              pagination={{
+                clickable: true,
+              }}
+              navigation={true}
+              modules={[Pagination, Navigation]}
+              style={{
+                "--swiper-pagination-color": "#000000",
+                "--swiper-navigation-color": "#000000",
+              }}
+            >
+              <div>
+                {prodInfo.map((prod, index) => (
+                  <SwiperSlide key={index}>{prod}</SwiperSlide>
+                ))}
+              </div>
+            </Swiper>
+          </div>
+
+          <div className="hidden lg:mx-auto lg:container lg:px-10 lg:grid lg:grid-cols-5 lg:gap-3  md:grid md:grid-cols-5 md:gap-3">
             {prodInfo}
           </div>
         </div>
 
         {/* Other Services Section */}
         <div id="others">
-          <h1 className="container mx-auto px-10 py-8 text-2xl font-semibold">
+          <h1 className="container mx-auto px-5 pt-8 text-2xl font-semibold md:px-5 lg:px-10">
             Other Services
           </h1>
-          <div className="container mx-auto px-10 grid grid-cols-2 gap-3">
+          <div className="container mx-auto pt-5 px-5 lg:px-10 lg:grid lg:grid-cols-2 lg:gap-3">
             <CategoryCard
               linkTo="/service-vet"
               imgSrc={servVet}

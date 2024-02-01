@@ -1,22 +1,3 @@
-/* nav{
-    display: flex;
-    justify-content:flex-start;
-    align-items: center;
-    padding: 10px;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-} */
-
-/* className="flex flex-start items-center shadow-stone-900 p-10" */
-
-.nav-logo{
-    /* border: 2px solid red; */
-    width: 50px;
-    height: 50px;
-    background-color: gray;
-    border-radius: 40px;
-    margin-inline: 10px;
-}
-
 a{
     text-decoration: none;
     color: black;
@@ -25,15 +6,4 @@ a{
 
 .nav-title{
     text-decoration: none;
-}
-
-.nav-items > ul{
-    display: flex;
-    align-items: center;
-    padding: 0;
-    list-style: none;
-}
-
-.nav-items > ul li {
-    margin-inline: 40px;
 }
