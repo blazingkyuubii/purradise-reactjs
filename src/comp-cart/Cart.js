@@ -66,13 +66,10 @@ export default function Cart() {
           totalPrice += totalItemPrice;
 
           return (
-            <div
-              id="cart-item-container"
-              className="flex flex-row p-5 py-5 gap-1 lg:px-20"
-            >
+            <div id="cart-item-container"  className="flex flex-row p-5 py-5 gap-3 lg:px-20">
               <div
                 id="cart-item-image-container"
-                className="border border-red-400 w-36 h-32"
+                className="w-36 h-32"
               >
                 <img src={product.image} />
               </div>
@@ -135,14 +132,12 @@ export default function Cart() {
           <h1 className="font-bold">Shipping Details</h1>
           <div className=" flex flex-row p-3 justify-between">
             <div id="labels">
-              <p>Items Total:</p>
+              <p>Shipping Method:</p>
               <p>Shipping Fee:</p>
-              <p>Total Payment:</p>
             </div>
             <div id="prices">
-              <p>₱{totalPrice}</p>
+              <p>Standard</p>
               <p>₱100</p>
-              <p>₱{totalPrice + 100}</p>
             </div>
           </div>
 

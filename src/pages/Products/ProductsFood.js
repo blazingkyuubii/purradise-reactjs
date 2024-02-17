@@ -20,10 +20,10 @@ export default function ProductsPage() {
       <Navbar />
       <Hero />
       <div className="bg-weed-green-200">
-        <h1 className="container mx-auto px-10 py-8 text-2xl font-semibold">
-          Products
+        <h1 className="container mx-auto text-2xl font-semibold px-5 lg:px-10 py-8">
+          Cat Foods
         </h1>
-        <div className="container mx-auto px-10 pb-5 grid grid-cols-5 gap-3">
+        <div className="container mx-auto grid grid-cols-2 gap-1 px-5 pb-5 lg:px-10 lg:pb-5 lg:grid lg:grid-cols-5">
           {prodInfo}
         </div>
       </div>
