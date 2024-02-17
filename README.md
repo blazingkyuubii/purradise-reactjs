@@ -1,5 +1,5 @@
-# ReactJS Upskilling Project
-This website is still halfway finished, it's a project I'm currently working on for my ReactJS journey! 
+# Status: WIP (Work In Progress)
+Some pages are still on barebones/not yet responsive.
 
 # Tech Stack
 (Create React App) ReactJS, TailwindCSS, Headless UI, SwiperJS.
