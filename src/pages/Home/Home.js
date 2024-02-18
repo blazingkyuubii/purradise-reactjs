@@ -69,7 +69,7 @@ export default function Home() {
             </p>
             <button
               type="submit"
-              className="w-full my-8 lg:my-0 lg:mt-8 lg:w-56 justify-center rounded-md bg-weed-green-200 text-black px-8 py-3 hover:text-white hover:bg-weed-green-400"
+              className="w-full my-8 lg:my-0 lg:mt-8 lg:w-60 justify-center rounded-md bg-weed-green-200 text-black px-8 py-3 hover:text-white hover:bg-weed-green-400"
             >
               More About Purradise
             </button>
@@ -152,7 +152,7 @@ export default function Home() {
             </Swiper>
           </div>
 
-          <div className="hidden lg:mx-auto lg:container lg:px-10 lg:grid lg:grid-cols-5 lg:gap-3  md:grid md:grid-cols-5 md:gap-3">
+          <div className="hidden lg:mx-auto lg:container lg:px-10 lg:grid lg:grid-cols-5 lg:gap-3 lg:pt-5 md:grid md:grid-cols-5 md:gap-3">
             {prodInfo}
           </div>
         </div>
