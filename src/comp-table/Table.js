@@ -33,7 +33,7 @@ export default function Table(){
     ];
 
     return (
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid lg:grid-cols-2 gap-5">
         {/* Column 1: General to Vaccinations */}
         <div>
           <table className="table1 w-full">
